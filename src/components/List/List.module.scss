@@ -1,0 +1,42 @@
+@import "../../styles/variables/colors.scss";
+
+.List {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    border: 0.1rem solid $listBorderColor;
+    padding: 1rem;
+    justify-content: space-between;
+
+    .List-header {
+      display: flex;
+      align-items: center;
+
+      h2 {
+        color: $subTitleColor;
+      }
+
+      .List-img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100%;
+        border: solid 1px $imgBorderColor;
+        margin-right: 0.5rem;
+        overflow: hidden;
+
+        img {
+          height: 4rem;
+          margin-left: -0.75rem;
+        }
+      }
+    }
+    
+    .List-note {
+      width: 30%;
+      text-align: left;
+    }
+}
+  
+  

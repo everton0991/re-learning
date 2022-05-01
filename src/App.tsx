@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import List from './components/List/List';
 import AddToList from './components/AddToList/AddToList';
 
-import './App.css';
+import './App.scss';
 
 export interface IState {
   people: {

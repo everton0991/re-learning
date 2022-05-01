@@ -43,45 +43,6 @@ ul {
   }
 }
 
-.List {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  max-width: 100%;
-  margin: 0 auto;
-  border: 0.1rem solid rgba(0, 0, 0, 0.233);
-  padding: 1rem;
-  justify-content: space-between;
-}
-
-.List-header {
-  display: flex;
-  align-items: center;
-}
-
-.List-header h2 {
-  color: rgb(37, 36, 36);
-}
-
-.List-img {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 100%;
-  border: solid 1px #ccc;
-  margin-right: 0.5rem;
-  overflow: hidden;
-}
-
-.List-img img {
-  height: 4rem;
-  margin-left: -0.75rem;
-}
-
-.List-note {
-  width: 30%;
-  text-align: left;
-}
-
 .AddToList {
   display: flex;
   flex-direction: column;
