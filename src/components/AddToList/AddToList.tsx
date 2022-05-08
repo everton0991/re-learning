@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IState as Props } from '../../App';
+import { IState as Props } from '../../pages/Home';
 
 interface IProps {
   people: Props['people'];

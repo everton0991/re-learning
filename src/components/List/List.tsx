@@ -1,5 +1,5 @@
 import React from 'react';
-import { IState as IProps } from '../../App';
+import { IState as IProps } from '../../pages/Home';
 import styles from './List.module.scss';
 
 function List({ people }: IProps) {
