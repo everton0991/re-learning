@@ -1,26 +1,44 @@
-import React from 'react';
-import { IState as IProps } from '../../pages/Home';
-import styles from './List.module.scss';
+import { Container, Grid, Image } from 'semantic-ui-react'
+import { IState as IProps } from 'pages/Home'
 
 function List({ people }: IProps) {
   const renderList = (): JSX.Element[] => {
     return people.map((person, index) => (
-      <li className={styles['List']} key={index}>
-        <div className={styles['List-header']}>
-          <div className={styles['List-img']}>
-            <img alt={person.name} src={person.url} />
-          </div>
+      <Grid.Row verticalAlign="middle" key={index}>
+        <Grid.Column width={2}>
+          <Image
+            size="small"
+            centered
+            fluid
+            rounded
+            bordered
+            alt={person.name}
+            src={person.url}
+          />
+        </Grid.Column>
 
-          <h2>{person.name}</h2>
-        </div>
+        <Grid.Column>
+          <p>{person.name}</p>
+        </Grid.Column>
 
-        <p>{person.age} years old</p>
-        <p className={styles['List-note']}>{person.note} </p>
-      </li>
-    ));
-  };
+        <Grid.Column>
+          <p>{person.age} years old</p>
+        </Grid.Column>
 
-  return <ul>{renderList()}</ul>;
+        <Grid.Column>
+          <p>{person.note}</p>
+        </Grid.Column>
+      </Grid.Row>
+    ))
+  }
+
+  return (
+    <Container className="my-8">
+      <Grid padded divided="vertically" columns={4}>
+        {renderList()}
+      </Grid>
+    </Container>
+  )
 }
 
-export default List;
+export default List

@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import { IState as Props } from '../../pages/Home';
+import React, { useState } from 'react'
+import { Segment, Form, Button } from 'semantic-ui-react'
+import { IState as Props } from 'pages/Home'
 
 interface IProps {
-  people: Props['people'];
-  setPeople: React.Dispatch<React.SetStateAction<Props['people']>>;
+  people: Props['people']
+  setPeople: React.Dispatch<React.SetStateAction<Props['people']>>
 }
 
 function AddToList({ people, setPeople }: IProps) {
@@ -11,21 +12,21 @@ function AddToList({ people, setPeople }: IProps) {
     name: '',
     age: '',
     note: '',
-    image: '',
-  });
+    image: ''
+  })
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ): void => {
     setInput({
       ...input,
-      [e.target.name]: e.target.value,
-    });
-  };
+      [e.target.name]: e.target.value
+    })
+  }
 
   const handleClick = () => {
     if (!input.name || !input.age || !input.image) {
-      return;
+      return
     }
 
     setPeople([
@@ -34,60 +35,69 @@ function AddToList({ people, setPeople }: IProps) {
         name: input.name,
         age: parseInt(input.age),
         url: input.image,
-        note: input.note,
-      },
-    ]);
+        note: input.note
+      }
+    ])
 
     setInput({
       name: '',
       age: '',
       note: '',
-      image: '',
-    });
-  };
+      image: ''
+    })
+  }
 
   return (
-    <div className='AddToList'>
-      <input
-        type='text'
-        placeholder='Name'
-        className='AddToList-input'
-        value={input.name}
-        onChange={handleChange}
-        name='name'
-      />
+    <Segment inverted color="violet">
+      <Form inverted>
+        <Form.Group widths="equal">
+          <Form.Input
+            fluid
+            label="Name"
+            type="text"
+            placeholder="Name"
+            value={input.name}
+            onChange={handleChange}
+            name="name"
+          />
 
-      <input
-        type='number'
-        placeholder='Age'
-        className='AddToList-input'
-        value={input.age}
-        onChange={handleChange}
-        name='age'
-      />
+          <Form.Input
+            fluid
+            label="Age"
+            type="number"
+            placeholder="Age"
+            value={input.age}
+            onChange={handleChange}
+            name="age"
+          />
 
-      <input
-        type='text'
-        placeholder='Image URL'
-        className='AddToList-input'
-        value={input.image}
-        onChange={handleChange}
-        name='image'
-      />
+          <Form.Input
+            fluid
+            label="Image URL"
+            type="text"
+            placeholder="Image URL"
+            value={input.image}
+            onChange={handleChange}
+            name="image"
+          />
+        </Form.Group>
 
-      <textarea
-        placeholder='Note'
-        className='AddToList-input'
-        value={input.note}
-        onChange={handleChange}
-        name='note'
-      />
+        <Form.TextArea
+          label="Note"
+          placeholder="Note"
+          value={input.note}
+          onChange={handleChange}
+          name="note"
+        />
 
-      <button className='AddToList-btn' onClick={handleClick}>
-        Add to List
-      </button>
-    </div>
-  );
+        <div className="flex justify-end">
+          <Button color="teal" onClick={handleClick}>
+            Add to List
+          </Button>
+        </div>
+      </Form>
+    </Segment>
+  )
 }
 
-export default AddToList;
+export default AddToList
