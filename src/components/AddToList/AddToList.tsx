@@ -91,7 +91,7 @@ function AddToList({ people, setPeople }: IProps) {
         />
 
         <div className="flex justify-end">
-          <Button color="teal" onClick={handleClick}>
+          <Button color="yellow" onClick={handleClick}>
             Add to List
           </Button>
         </div>

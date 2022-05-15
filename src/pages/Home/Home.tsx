@@ -21,10 +21,10 @@ function Home() {
       note: 'Allergic to staying on the same team'
     },
     {
-      name: 'LeBron James',
-      url: 'https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png',
-      age: 36,
-      note: 'Allergic to staying on the same team'
+      name: 'Jhon Doe',
+      url: 'https://cdn.nba.com/manage/2020/10/glenn-robinson-iii-iso-1101-784x523.jpg',
+      age: 32,
+      note: 'Nothing to say'
     }
   ])
 

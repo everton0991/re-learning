@@ -9,7 +9,6 @@ function List({ people }: IProps) {
           <Image
             size="small"
             centered
-            fluid
             rounded
             bordered
             alt={person.name}
