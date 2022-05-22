@@ -1,5 +1,5 @@
-import './index.css'
 import 'semantic-ui-less/semantic.less'
+import './index.css'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import reportWebVitals from './reportWebVitals'

@@ -48,7 +48,7 @@ function AddToList({ people, setPeople }: IProps) {
   }
 
   return (
-    <Segment inverted color="violet">
+    <Segment inverted>
       <Form inverted>
         <Form.Group widths="equal">
           <Form.Input
@@ -91,9 +91,7 @@ function AddToList({ people, setPeople }: IProps) {
         />
 
         <div className="flex justify-end">
-          <Button color="yellow" onClick={handleClick}>
-            Add to List
-          </Button>
+          <Button onClick={handleClick}>Add to List</Button>
         </div>
       </Form>
     </Segment>

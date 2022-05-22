@@ -1,3 +1,26 @@
 /*******************************
      User Global Variables
 *******************************/
+
+@light: #d4e2ff;
+@darkBg: #3a4457;
+@lightBorder: #53617d;
+
+/*-------------------
+    Brand Colors
+--------------------*/
+
+@primaryColor: @light;
+
+/*-------------------
+        Page
+--------------------*/
+
+@pageBackground: @darkBg;
+@textColor: @light;
+
+/*-------------------
+      Borders
+--------------------*/
+
+@borderColor: @lightBorder;

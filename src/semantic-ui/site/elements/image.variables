@@ -1,3 +1,11 @@
 /*******************************
     User Variable Overrides
 *******************************/
+
+@lightBorder: #53617d;
+
+/*-------------------
+       Element
+--------------------*/
+
+@imageBorder: 1px solid @lightBorder;
