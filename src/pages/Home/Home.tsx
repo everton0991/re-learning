@@ -33,9 +33,11 @@ function Home() {
   })
 
   return (
-    <Container className="container mx-auto">
-      <Segment vertical className="my-10 text-center">
-        <Header as="h1">People invited to our Party</Header>
+    <Container className="container mx-auto my-10">
+      <Segment vertical>
+        <Header as="h1" textAlign="center">
+          People invited to our Party
+        </Header>
       </Segment>
       <List people={people} />
       <AddToList people={people} setPeople={setPeople} />
