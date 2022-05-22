@@ -1,6 +1,7 @@
 import { render } from '@testing-library/react'
 import AddToList from './AddToList'
 
+// TODO Add test coverage - At least 80%
 it('renders correctly', () => {
   const tree = render(
     <AddToList
