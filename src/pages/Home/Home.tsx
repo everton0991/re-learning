@@ -1,30 +1,17 @@
-import { Container, Menu } from 'semantic-ui-react'
-import { Link } from 'react-router-dom'
-
-export interface IState {
-  people: {
-    age: number
-    name: string
-    url: string
-    note?: string
-  }[]
-}
+import { Header } from 'semantic-ui-react'
+import { Navigation, ContentWrapper } from 'components'
 
 function Home() {
   return (
-    <Menu borderless inverted fixed="top">
-      <Container text>
-        <Menu.Item as={Link} to="/">
+    <>
+      <Navigation />
+      <ContentWrapper>
+        <Header as="h1">
+          {/* TODO Add localization/internatiolization for static texts */}
           Home
-        </Menu.Item>
-        <Menu.Item as={Link} to="/party">
-          Players Party
-        </Menu.Item>
-        <Menu.Item as={Link} to="/wallet">
-          Wallet
-        </Menu.Item>
-      </Container>
-    </Menu>
+        </Header>
+      </ContentWrapper>
+    </>
   )
 }
 

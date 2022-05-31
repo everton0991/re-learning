@@ -1,5 +1,12 @@
 import { Container, Grid, Image } from 'semantic-ui-react'
-import { IState as IProps } from 'pages/Home'
+interface IProps {
+  people: {
+    age: number
+    name: string
+    url: string
+    note?: string
+  }[]
+}
 
 function List({ people }: IProps) {
   const renderList = (): JSX.Element[] => {

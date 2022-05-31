@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { ethers } from 'ethers'
-import { Container, Segment, Header } from 'semantic-ui-react'
+import { Header } from 'semantic-ui-react'
+import { Navigation, ContentWrapper } from 'components'
 
 export interface IState {
   people: {
@@ -29,14 +30,15 @@ function Home() {
   }, [])
 
   return (
-    <Container className="container mx-auto my-10">
-      <Segment vertical>
-        <Header as="h1" textAlign="center">
+    <>
+      <Navigation />
+      <ContentWrapper>
+        <Header as="h1">
           {/* TODO Add localization/internatiolization for static texts */}
           Wallet
         </Header>
-      </Segment>
-    </Container>
+      </ContentWrapper>
+    </>
   )
 }
 

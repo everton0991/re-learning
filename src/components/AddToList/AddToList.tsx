@@ -1,6 +1,14 @@
 import React, { useState } from 'react'
 import { Segment, Form, Button } from 'semantic-ui-react'
-import { IState as Props } from 'pages/Home'
+
+interface Props {
+  people: {
+    age: number
+    name: string
+    url: string
+    note?: string
+  }[]
+}
 
 interface IProps {
   people: Props['people']

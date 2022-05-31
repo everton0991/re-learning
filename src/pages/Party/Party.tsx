@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import { Container, Segment, Header } from 'semantic-ui-react'
-import List from 'components/List/List'
-import AddToList from 'components/AddToList/AddToList'
+import { Header } from 'semantic-ui-react'
+import { ContentWrapper, List, AddToList, Navigation } from 'components'
 
 export interface IState {
   people: {
@@ -33,17 +32,20 @@ function Home() {
   })
 
   return (
-    <Container className="container mx-auto my-10">
-      <Segment vertical>
-        <Header as="h1" textAlign="center">
-          {/* TODO Add localization/internatiolization for static texts */}
-          People invited to our Party
-        </Header>
-      </Segment>
+    <>
+      <Navigation />
+      <ContentWrapper>
+        <>
+          <Header as="h1">
+            {/* TODO Add localization/internatiolization for static texts */}
+            People invited to our Party
+          </Header>
 
-      <List people={people} />
-      <AddToList people={people} setPeople={setPeople} />
-    </Container>
+          <List people={people} />
+          <AddToList people={people} setPeople={setPeople} />
+        </>
+      </ContentWrapper>
+    </>
   )
 }
 
