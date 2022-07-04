@@ -2,31 +2,31 @@
      User Global Variables
 *******************************/
 
-@light: #d4e2ff;
-@darkBg: #3a4457;
-@lightBorder: #53617d;
+@white: #ffffff;
+@black: #000000;
+@whiteBorder: #cccccc;
 
 /*-------------------
        Fonts
 --------------------*/
 
-@fontName: 'JetBrains Mono';
+@fontName: 'Roboto';
 
 /*-------------------
     Brand Colors
 --------------------*/
 
-@primaryColor: @light;
+@primaryColor: @black;
 
 /*-------------------
         Page
 --------------------*/
 
-@pageBackground: @darkBg;
-@textColor: @light;
+@pageBackground: @white;
+@textColor: @black;
 
 /*-------------------
       Borders
 --------------------*/
 
-@borderColor: @lightBorder;
+@borderColor: @whiteBorder;

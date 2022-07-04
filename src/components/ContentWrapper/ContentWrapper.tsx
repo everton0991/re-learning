@@ -7,7 +7,7 @@ interface IProps {
 
 function ContentWrapper({ children }: IProps) {
   return (
-    <Container className="container mx-auto">
+    <Container fluid className="min-h-full">
       <Segment vertical>{children}</Segment>
     </Container>
   )
